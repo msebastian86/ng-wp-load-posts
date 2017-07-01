@@ -3,6 +3,7 @@ import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -10,6 +11,8 @@ import { Router } from '@angular/router';
   providers: [PostsService]
 })
 export class PostListComponent implements OnInit {
+
+	title = 'BBM API APP';
 
 	posts: Post[];
 
@@ -30,5 +33,6 @@ export class PostListComponent implements OnInit {
 	selectPost(slug) {
 		this.router.navigate([slug]);
 	}
+
 
 }
